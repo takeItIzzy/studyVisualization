@@ -49,6 +49,7 @@ module.exports = {
     '@typescript-eslint/no-triple-slash-reference': 0,
     '@typescript-eslint/ban-ts-ignore': 0,
     '@typescript-eslint/no-this-alias': 0,
+    '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/triple-slash-reference': [
       'error',
       { path: 'always', types: 'never', lib: 'never' }
