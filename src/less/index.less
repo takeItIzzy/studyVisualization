@@ -11,10 +11,46 @@
   font-family: Jet-Brains-Mono;
   src: url('../assets/fonts/JetBrainsMono-Bold-Italic.ttf'), url('../assets/fonts/JetBrainsMono-Bold.ttf'), url('../assets/fonts/JetBrainsMono-ExtraBold-Italic.ttf'), url('../assets/fonts/JetBrainsMono-ExtraBold.ttf'), url('../assets/fonts/JetBrainsMono-Italic.ttf'), url('../assets/fonts/JetBrainsMono-Medium-Italic.ttf'), url('../assets/fonts/JetBrainsMono-Medium.ttf'), url('../assets/fonts/JetBrainsMono-Regular.ttf');
 }
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-box-column extends .flex-box {
+  flex-direction: column;
+}
+
+.flex-box-space-between extends .flex-box {
+  justify-content: space-between;
+}
+
+.flex-box-column-space-between extends .flex-box-column {
+  justify-content: space-between;
+}
 // settings
 
 body {
   margin: 0;
   padding: 0;
   font-family: Jet-Brains-Mono;
+  width: 100%;
+  .content {
+    width: 100%;
+    background-color: #fbfbfb;
+  }
+}
+
+.modules {
+  width: 80%;
+  .module {
+    width: 90%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin: 28px 0;
+  }
 }

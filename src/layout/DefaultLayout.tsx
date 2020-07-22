@@ -16,11 +16,7 @@ const DefaultLayout = ({
       render={(matchProps) => {
         return (
           <Layout>
-            {rest.path === '/modify' ? (
-              <Redirect to="/add" />
-            ) : (
-              <Component {...matchProps} />
-            )}
+            <Component {...matchProps} />
           </Layout>
         );
       }}

@@ -8,7 +8,7 @@ const LayoutWithHeader = ({ children }: IProps) => {
   return (
     <div className="bodyWrapper">
       <div>Header</div>
-      <div className="content">{children}</div>
+      <div className="content flex-box">{children}</div>
     </div>
   );
 };
