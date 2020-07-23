@@ -1,15 +1,31 @@
 import React, { ReactNode } from 'react';
+import { useLocation, useHistory } from 'react-router-dom';
 
 interface IProps {
   children: ReactNode;
 }
 
+const path2title: {
+  [key: string]: string;
+} = {
+  '/': 'modules',
+  '/canvas': 'canvas',
+  '/svg': 'svg',
+  '/webgl': 'webgl'
+};
+
 const LayoutWithHeader = ({ children }: IProps) => {
+  const location = useLocation();
+  const history = useHistory();
   return (
-    <div className="bodyWrapper">
-      <div>Header</div>
+    <>
+      <div className="header">
+        <span onClick={() => history.push('/')}>
+          {path2title[location.pathname]}
+        </span>
+      </div>
       <div className="content flex-box">{children}</div>
-    </div>
+    </>
   );
 };
 

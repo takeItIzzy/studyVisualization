@@ -4,9 +4,9 @@ import DefaultLayout from './layout/DefaultLayout';
 import LayoutWithHeader from './layout/LayoutWithHeader';
 
 import Modules from './components/Modules';
-import Canvas from './components/Canvas';
-import Svg from './components/Svg';
-import WebGL from './components/WebGL';
+import Canvas from './components/canvas/Canvas';
+import Svg from './components/svg/Svg';
+import WebGL from './components/webgl/WebGL';
 
 const App = () => {
   return (
