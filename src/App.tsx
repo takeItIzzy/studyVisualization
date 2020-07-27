@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DefaultLayout from './layout/DefaultLayout';
 import LayoutWithHeader from './layout/LayoutWithHeader';
 
@@ -20,17 +20,22 @@ const App = () => {
           layout={LayoutWithHeader}
           exact
         />
-        <DefaultLayout
-          path="/canvas"
-          component={Canvas}
-          layout={LayoutWithHeader}
-        >
-          <DefaultLayout
-            path="/canvas/sample1"
-            component={CanvasSamp1}
-            layout={LayoutWithHeader}
-          />
-        </DefaultLayout>
+        <Route path="/canvas">
+          <Switch>
+            <DefaultLayout
+              path="/canvas"
+              exact
+              component={Canvas}
+              layout={LayoutWithHeader}
+            />
+            <DefaultLayout
+              exact
+              path="/canvas/sample1"
+              component={CanvasSamp1}
+              layout={LayoutWithHeader}
+            />
+          </Switch>
+        </Route>
         <DefaultLayout path="/svg" component={Svg} layout={LayoutWithHeader} />
         <DefaultLayout
           path="/webgl"
