@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Canvas = ({ children }: { children: React.ReactNode }) => {
-  // console.log(children);
+const Canvas = () => {
   return (
     <>
       <Link to="/canvas/sample1">sample1</Link>
