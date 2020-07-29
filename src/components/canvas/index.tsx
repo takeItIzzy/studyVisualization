@@ -5,6 +5,7 @@ const Canvas = () => {
   return (
     <>
       <Link to="/canvas/sample1">sample1</Link>
+      <Link to="/canvas/sample2">sample2</Link>
     </>
   );
 };

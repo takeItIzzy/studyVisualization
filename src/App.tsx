@@ -9,6 +9,7 @@ import Svg from './components/svg/Svg';
 import WebGL from './components/webgl/WebGL';
 
 import CanvasSamp1 from './components/canvas/Sample1';
+import CanvasSamp2 from './components/canvas/Sample2';
 
 const App = () => {
   return (
@@ -32,6 +33,12 @@ const App = () => {
               exact
               path="/canvas/sample1"
               component={CanvasSamp1}
+              layout={LayoutWithHeader}
+            />
+            <DefaultLayout
+              exact
+              path="/canvas/sample2"
+              component={CanvasSamp2}
               layout={LayoutWithHeader}
             />
           </Switch>

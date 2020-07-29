@@ -11,6 +11,7 @@ const path2title: {
   '/': 'modules',
   '/canvas': 'canvas',
   '/canvas/sample1': 'sample1',
+  '/canvas/sample2': 'sample2',
   '/svg': 'svg',
   '/webgl': 'webgl'
 };
